@@ -1,0 +1,235 @@
+:root {
+            /* DEFINIÇÃO DAS VARIÁVEIS DE COR */
+            
+            /* Tons de Azul */
+            --azul-claro: #58a7db;
+            --azul-medio: #2f74db;
+            --azul-escuro: #0a33ad;
+            
+            /* Tons de Vermelho */
+            --vermelho-suave: #dd7c7c;
+            --vermelho-vibrante: #df2b2b;
+            --vermelho-profundo: #b60e0e;
+            
+            /* Branco/Neutro */
+            --branco-puro: #ffffff;
+            --branco-gelo: #f0f5ff; /* Um branco com leve toque azul */
+    
+        }
+html{
+    scroll-behavior: smooth;
+}
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            /* CONSTRUÇÃO DO MESH GRADIENT */
+            /* Usamos radial-gradient sobrepostos em posições diferentes */
+            background-color: var(--branco-gelo); /* Cor de fundo base */
+            background-image: 
+                radial-gradient(at 10% 10%, var(--azul-claro) 0, transparent 40%),
+                radial-gradient(at 90% 10%, var(--vermelho-suave) 0, transparent 40%),
+                radial-gradient(at 50% 50%, var(--branco-puro) 0, transparent 60%), /* Ponto de branco central */
+                radial-gradient(at 10% 90%, var(--vermelho-vibrante) 0, transparent 50%),
+                radial-gradient(at 90% 90%, var(--azul-medio) 0, transparent 50%),
+                radial-gradient(at 30% 60%, var(--azul-escuro) 0, transparent 30%), /* Ponto escuro mais sutil */
+                radial-gradient(at 70% 30%, var(--vermelho-profundo) 0, transparent 30%); /* Ponto profundo mais sutil */
+            background-attachment: fixed;
+            background-size: 200% 200%; /* Aumenta o tamanho para animação */
+            animation: meshAnimation 20s ease infinite; /* Adiciona movimento */
+        }
+                /* ANIMAÇÃO DO MESH GRADIENT */
+        @keyframes meshAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+header{
+    width: 85%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 2% 6%;
+    text-align: center;
+    
+}
+
+.nav{
+    width: 85%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 2% 6%;
+    display: flex;         /* Ativa o modo flexível */
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center;
+    
+    
+}
+.nav a{
+    text-decoration: none;
+    color:#0a33ad;
+    padding: 0 15px; /* Espaçamento horizontal entre os links */
+    display: inline-block; /* Garante que o padding funcione bem */
+    transition: transform 0.2s ease;
+}
+.nav a:hover{
+    transform: scale(1.025);
+    background: rgba(219, 69, 69, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+main{
+    width: 85%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 2% 6%;        
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center;
+}
+main h1{
+    text-align: center;
+}
+.conteudo{
+    width: 85%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 2% 6%;      
+    transition: transform 0.2s ease;
+
+    display: flex;         /* Ativa o modo flexível */
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center
+}
+.conteudo:hover{
+    transform:scale(1.025);
+}
+.conteudo_tb{
+    width: 70%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 2% 15%;      
+    transition: transform 0.2s ease;
+
+    display: flex;         /* Ativa o modo flexível */
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center
+}
+.conteudo_tb:hover{
+    transform:scale(1.025);
+}
+.titulo{
+    width: 60%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(148, 188, 240, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 2% 20%;      
+
+    display: flex;         /* Ativa o modo flexível */
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center
+}
+.typewriter {
+            font-family: monospace;
+            font-size: 2rem;
+            overflow: hidden; 
+            border-right: .15em solid var(--cor-1); /* O cursor */
+            white-space: nowrap; 
+            margin: 0 auto; 
+            animation: 
+                typing 3s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 50% }
+        }
+.hidden-section{
+    opacity: 0;
+    filter: blur(8px); /* Um pouco mais de desfoque para suavizar */
+    transform: translateY(80px); /* Começa um pouco mais de baixo */
+    transition: 
+        opacity 1.8s ease-in-out, 
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 1.5s ease;
+}
+.show-section{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+.formacao.hidden-section {
+    transition-delay: 0.5s;
+}
+table{
+    padding: 1%;
+    margin: 1%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    border-color: #f0f5ff;
+    
+}
+th{
+    text-align: center;
+    background-color: #97b2fb; /* Cor cinza claro nas linhas pares */
+    color: rgb(246, 250, 254);
+}
+tr{
+    text-align: center;
+    background-color: #c7d5fd; /* Cor cinza claro nas linhas pares */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #97b2fb; /* Cor cinza claro nas linhas pares */
+  color: rgb(246, 250, 254);
+ -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Espessura e Cor */
+ font-weight: 700;
+}
+.btn {
+    display: inline-block;
+  text-decoration: none;
+  padding: 1% 2%;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #444;
+  background-color: #cde2fe; /* Mesma cor do fundo */
+  border-radius: 50px;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  /* O "Pulo do Gato": Sombras duplas */
+  box-shadow: 
+    20px 10px 10px #7a7d80,   /* Sombra escura */
+    -20px -10px 30px #ffffff; /* Sombra clara/brilho */
+    
+  transition: all 0.3s ease;
+}
+
+/* Efeito de "Clique" */
+.btn:active {
+  box-shadow: 
+    inset 6px 6px 12px #bec3c9, 
+    inset -6px -6px 12px #ffffff;
+  transform: scale(0.98);
+}
