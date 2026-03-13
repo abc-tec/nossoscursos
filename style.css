@@ -135,6 +135,9 @@ main h1{
 .conteudo_tb:hover{
     transform:scale(1.025);
 }
+img{
+    width:50%;
+}
 .titulo{
     width: 60%;
     padding: 1%;
