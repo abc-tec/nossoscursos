@@ -162,7 +162,7 @@ main h1{
 
         @keyframes typing {
             from { width: 0 }
-            to { width: 50% }
+            to { width: 80% }
         }
 .hidden-section{
     opacity: 0;
