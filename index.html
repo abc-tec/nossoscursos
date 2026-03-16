@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABC -Página Inicial</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
 </head>
 <body>
     <header>
@@ -21,10 +19,11 @@
         </div>
     </header>
     <main>
-        <h1 class="titulo hidden-section">Sobre a ABC</h1>
-        <section class="conteudo hidden-section">
+        <h1 class="titulo active">Sobre a ABC</h1>
+        <section class="conteudo active">
             <div>
                 <p>A ABC Tecnologia está presente em São José da Lapa desde 1997, conectando gerações e movimentando a população Lapense e metropolitana, com cursos atualizados e diversas técnicas de aprendizado, voltando sempre o cuidado para o desenvolvimento pessoal e objetivo dos nossos clientes, venha fazer parte da Família ABC!</p>
+                <img src="imagens/abc-logo.png" alt="" id="logo-img">
             </div>
         </section>
     </main>
@@ -35,5 +34,5 @@
     navigator.serviceWorker.register('./sw.js')
       .then(() => console.log("Service Worker Registrado!"));
   }
-</script>
+</script>   
 </html>

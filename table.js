@@ -25,14 +25,14 @@ self.addEventListener('fetch', e => {
 });
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
-const conteudos = document.querySelectorAll('.conteudo');
+const conteudos = document.querySelectorAll('.conteudo_tb');
 
 let active = 0;
 const total = conteudos.length;
 let timer;
 
 function update(direction){
-    document.querySelector('.conteudo.active').classList.remove('active');
+    document.querySelector('.conteudo_tb.active').classList.remove('active');
      //Responsável pela animação de ir para o próximo
     if (direction>0) {
         active += 1;

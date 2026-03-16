@@ -8,17 +8,15 @@
             
             /* Tons de Vermelho */
             --vermelho-suave: #dd7c7c;
-            --vermelho-vibrante: #df2b2b;
-            --vermelho-profundo: #b60e0e;
+            --vermelho-vibrante: #ee5858;
+            --vermelho-profundo: #d82222;
             
             /* Branco/Neutro */
             --branco-puro: #ffffff;
             --branco-gelo: #f0f5ff; /* Um branco com leve toque azul */
     
         }
-html{
-    scroll-behavior: smooth;
-}
+
         body {
             margin: 0;
             padding: 0;
@@ -39,6 +37,7 @@ html{
             background-attachment: fixed;
             background-size: 200% 200%; /* Aumenta o tamanho para animação */
             animation: meshAnimation 20s ease infinite; /* Adiciona movimento */
+            overflow: hidden;
         }
                 /* ANIMAÇÃO DO MESH GRADIENT */
         @keyframes meshAnimation {
@@ -49,24 +48,24 @@ html{
 
 header{
     width: 85%;
-    padding: 1%;
+    padding-bottom: 8px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px) brightness(100%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    margin: 2% 6%;
+    margin: 1% 6%;
     text-align: center;
     
 }
 
 .nav{
     width: 85%;
-    padding: 1%;
+    padding: 0;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px) brightness(100%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    margin: 2% 6%;
+    margin: 1% 6%;
     display: flex;         /* Ativa o modo flexível */
     align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
     justify-content: center;
@@ -87,17 +86,7 @@ header{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
 }
-main{
-    width: 85%;
-    padding: 1%;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(20px) brightness(100%);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    margin: 2% 6%;        
-    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
-    justify-content: center;
-}
+
 main h1{
     text-align: center;
 }
@@ -108,82 +97,87 @@ main h1{
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px) brightness(100%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    margin: 2% 6%;      
+    margin: 1% 6%;      
     transition: transform 0.2s ease;
 
     display: flex;         /* Ativa o modo flexível */
     align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
-    justify-content: center
-}
-.conteudo:hover{
-    transform:scale(1.025);
-}
-.conteudo_tb{
-    width: 70%;
-    padding: 1%;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(20px) brightness(100%);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    margin: 2% 15%;      
-    transition: transform 0.2s ease;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
 
-    display: flex;         /* Ativa o modo flexível */
-    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
-    justify-content: center
+    /* Animação */
+    transform: translateX(100vh);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
-.conteudo_tb:hover{
-    transform:scale(1.025);
+.conteudo-img{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
 }
-img{
-    width:50%;
+
+.active .conteudo-img img{
+    transform: translateX(0);
+    opacity: 1;
 }
 .titulo{
-    width: 60%;
+    width: 40%;
     padding: 1%;
     border-radius: 20px;
     background: rgba(148, 188, 240, 0.4);
     backdrop-filter: blur(20px) brightness(100%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    margin: 2% 20%;      
+    margin: 0 30%;      
 
     display: flex;         /* Ativa o modo flexível */
     align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
-    justify-content: center
-}
-.typewriter {
-            font-family: monospace;
-            font-size: 2rem;
-            overflow: hidden; 
-            border-right: .15em solid var(--cor-1); /* O cursor */
-            white-space: nowrap; 
-            margin: 0 auto; 
-            animation: 
-                typing 3s steps(40, end),
-                blink-caret .75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 80% }
-        }
-.hidden-section{
+    justify-content: center;
     opacity: 0;
-    filter: blur(8px); /* Um pouco mais de desfoque para suavizar */
-    transform: translateY(80px); /* Começa um pouco mais de baixo */
-    transition: 
-        opacity 1.8s ease-in-out, 
-        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-        filter 1.5s ease;
+
 }
-.show-section{
+.titulo_tb{
+    width: 80%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(148, 188, 240, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 1% 10%;      
+
+    display: flex;         /* Ativa o modo flexível */
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center;
+
+}
+.conteudo_tb{
+    width: 55%;
+    padding: 1%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) brightness(100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: 1% 20%;      
+    transition: transform 0.2s ease;
+
+    display: flex;         /* Ativa o modo flexível */
+    align-items: center;   /* Alinha a imagem e o texto verticalmente pelo centro */
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+
+    /* Animação */
+    transform: translateX(100vh);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+.active{
     opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
+    transform: translateX(0);
 }
-.formacao.hidden-section {
-    transition-delay: 0.5s;
-}
+
 table{
     padding: 1%;
     margin: 1%;
@@ -206,7 +200,6 @@ tr{
 tbody tr:nth-child(even) {
   background-color: #97b2fb; /* Cor cinza claro nas linhas pares */
   color: rgb(246, 250, 254);
- -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Espessura e Cor */
  font-weight: 700;
 }
 .btn {
@@ -235,4 +228,33 @@ tbody tr:nth-child(even) {
     inset 6px 6px 12px #bec3c9, 
     inset -6px -6px 12px #ffffff;
   transform: scale(0.98);
+}
+.arrows{
+    position: absolute;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+}
+
+.arrows-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(43, 110, 225, 0.1);
+    border: 1px solid rgba(0, 0, 182, 0.3);
+}
+
+.arrows-btn:hover{
+    background-color: rgba(67, 49, 156, 0.5);
+    border: 1px solid #fff;
+}
+#logo-img{
+    width: 40%;
+    margin-left: 30%;
 }
