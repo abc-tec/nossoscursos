@@ -57,7 +57,13 @@ header{
     text-align: center;
     
 }
-
+.marc_cert li{
+    list-style: none;
+}
+.marc_cert li::before{
+    content: "✅";
+    margin-right: 10px;
+}
 .nav{
     width: 85%;
     padding: 0;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lei Geral De Proteção de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="typewriter">Lei LGPD - Lei Geral de Proteção de Dados</h1>
+        <h2>Venha conhecer a importância e o porquê que usamos a LGPD</h2>
+
+        <div class="nav">
+            <nav>
+                <a href="index.html">Página Inicial</a>
+                <a href="cursos_basicos.html">Nossos Cursos</a>
+                <a href="tabela_preco.html">Tabela de Preços por horário</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="conteudo active">
+            <div>
+                <h2>Por que usamos o termo?</h2>
+                <p>A <strong>LGPD - Lei geral de Proteção de Dados (Lei nº 13..709/2018)</strong> foi criada para proteger os dados pesssoais dos cidadãos brsileiros. Ela garante que qualquer informação que identifique uma pessoa (como nome, CPF, endereço, telefone, entre outros) seja tratada com responsabilidade, segurança e transparência.</p>
+            </div>
+        </section>
+        <section class="conteudo">
+            <div>
+                <h2>Aplicações no Curso</h2>
+                <p>Ao se matricular no curso, o aluno fornece dados pessoais que são armazenados e utilizados para fins administrativos, como:</p>
+                <ul>
+                    <li>Emissão de declarações e certificados</li>
+                    <li>Controle de frequência e pagamentos</li>
+                    <li>Comunicação sobre atividades e atualizações do curso</li>
+                </ul>
+                <p>Por isso, é essencil informar que sguimos os princípios da LGPD, garantindo que:</p>
+                <ul class="marc_cert">
+                    <li>Os dados do aluno são usados <strong>somente para fins educacionais e administrativos</strong></li>
+                    <li>Nenhuma informação é compartilhada com terceiros sem autorização</li>
+                </ul>
+            </div>
+        </section>
+        <section class="conteudo">
+            <div>
+                <h2>Por que isso é importante?</h2>
+                <p>A LGPD protege o aluno contra o uso indevido de suas informações e reforça a confiança na relação entre escola e estudante.  Ao explicar o método do curso, é fundamental mostrar que o respeito à privacidade faz parte do nosso compromisso com a eduação de qualidade</p>
+               
+            </div>
+        </section>
+        <div class="arrows">
+            <button class="arrows-btn" id="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </button>
+            <button class="arrows-btn" id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+</body>
+<script src="int.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log("Service Worker Registrado!"));
+  }
+</script>   
+</html>
